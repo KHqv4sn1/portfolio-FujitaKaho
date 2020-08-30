@@ -14,3 +14,7 @@ body{
     background-color:#808080;
     font-size:25px;
 }
+
+main{
+    background-image:url("img/top.jpg");
+}
