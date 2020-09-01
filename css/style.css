@@ -1,20 +1,364 @@
-body{
-    padding:0;
-    margin:0;
+body {
+    padding: 0;
+    margin: 0;
 }
 
-.container{
-    width:1170px;
-    margin:0 auto;
+.container {
+    width: 1170px;
+    margin: 0 auto;
 }
 
-.top-bar{
-    color:#ffffff;
-    height:40px;
-    background-color:#808080;
-    font-size:25px;
+.top-wrapper {
+    background-size: cover;
 }
 
-main{
-    background-image:url("img/top.jpg");
+.top-bar {
+    color: white;
+    height: 40px;
+    background-color: #d8d8d8;
 }
+
+.top-bar-moji {
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 5px;
+}
+
+.main {
+    height: 550px;
+    width: 100%;
+    padding-top: 0;
+}
+
+.top-img {
+    height: 550px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+}
+
+.menu {
+    line-height: 40px;
+    margin: 0;
+    padding-top: 20px;
+    padding-right: 5px;
+    font-size: 20px;
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 120px;
+}
+
+.menu a {
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+    text-align: right;
+}
+
+.menu a:hover {
+    color: #fff;
+    text-shadow: 3px 3px 10px #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+.myname {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left: 500px;
+}
+
+.myname h1 {
+    font-size: 50px;
+}
+
+.myname h2 {
+    font-size: 30px;
+}
+
+.About,
+.Skills,
+.Contact {
+    width: 85%;
+    margin: 70px auto;
+}
+
+.About h3,
+.Skills h3,
+.Contact h3 {
+    border-bottom: 1px solid;
+    font-size: 30px;
+    margin: 40px 0;
+}
+
+.About dl {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.About {
+    position: relative;
+}
+
+.face-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.Skills p {
+    font-size: 20px;
+}
+
+.circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    float: left;
+    margin: 40px;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 120px;
+    height: 120px;
+    transform-origin: right 60px;
+    z-index: 2;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 120px;
+    height: 120px;
+    transform-origin: left 60px;
+    z-index: 3;
+}
+
+.circle-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    padding-top: 38px;
+    background: white;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.HTMLcircle {
+    background-color: #e44b23;
+}
+
+.HTMLcircle::after {
+    animation: rotateHTMLcircleright 2s linear forwards;
+}
+
+.HTMLcircle::before {
+    background-color: rgb(238, 178, 178);
+}
+
+@keyframes rotateHTMLcircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: rgb(238, 178, 178);
+    }
+    100% {
+        transform: rotate(180deg);
+        background-color: rgb(238, 178, 178);
+    }
+}
+
+.CSScircle {
+    background-color: #563d7c;
+}
+
+.CSScircle::after {
+    animation: rotateCSScircleright 2s linear forwards;
+}
+
+.CSScircle::before {
+    background-color: #e1d1fa;
+}
+
+@keyframes rotateCSScircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: #e1d1fa;
+    }
+    100% {
+        transform: rotate(180deg);
+        background-color: #e1d1fa;
+    }
+}
+
+.JavaScriptcircle {
+    background-color: #f1e05a;
+}
+
+.JavaScriptcircle::after {
+    animation: rotateJavaScriptcircleright 2s linear forwards;
+}
+
+.JavaScriptcircle::before {
+    background-color: #faf3bc;
+}
+
+@keyframes rotateJavaScriptcircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: #faf3bc;
+    }
+    100% {
+        transform: rotate(90deg);
+        background-color: #faf3bc;
+    }
+}
+
+.PHPcircle {
+    background-color: #4F5D95;
+}
+
+.PHPcircle::after {
+    animation: rotatePHPcircleright 2s linear forwards;
+}
+
+.PHPcircle::before {
+    background-color: #ccd6ff;
+}
+
+@keyframes rotatePHPcircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: #ccd6ff;
+    }
+    100% {
+        transform: rotate(30deg);
+        background-color: #ccd6ff;
+    }
+}
+
+.Wordpresscircle {
+    background-color: #13a0ff;
+}
+
+.Wordpresscircle::after {
+    animation: rotateWordpresscircleright 2s linear forwards;
+}
+
+.Wordpresscircle::before {
+    background-color: #b4defa;
+}
+
+@keyframes rotateWordpresscircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: #b4defa;
+    }
+    100% {
+        transform: rotate(30deg);
+        background-color: #b4defa;
+    }
+}
+
+.Responsivecircle {
+    background-color: #FF6347;
+}
+
+.Responsivecircle::after {
+    animation: rotateResponsivecircleright 2s linear forwards;
+}
+
+.Responsivecircle::before {
+    background-color: #ffcdc4;
+}
+
+@keyframes rotateResponsivecircleright {
+    0% {
+        transform: rotate(0deg);
+        background-color: #ffcdc4;
+    }
+    100% {
+        transform: rotate(120deg);
+        background-color: #ffcdc4;
+    }
+}
+
+.information {
+    margin: 50px;
+    text-align: center;
+}
+
+.Contact {
+    height: 300px;
+}
+
+.Contact i {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Contact p {
+    padding-top: 5px;
+    font-size: 17px;
+}
+
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    background: #acacac;
+    opacity: 0.6;
+}
+
+#page_top a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+#page_top a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f062';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+
