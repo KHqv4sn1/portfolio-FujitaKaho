@@ -387,6 +387,7 @@ ul {
 
 .menu-container {
     margin: 0;
+    position: relative;
 }
 
 .menu-container .menu {
@@ -463,6 +464,7 @@ ul {
     }
     .menu-container .menu {
         display: none;
+        position: absolute;
         width: 100%;
     }
     .menu-container .menu .menu-item a {
@@ -473,3 +475,4 @@ ul {
         border-bottom: none;
     }
 }
+
