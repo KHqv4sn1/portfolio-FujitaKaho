@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0;
     margin: 0;
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -15,8 +20,16 @@ body {
     background-size: cover;
 }
 
+.menu-icon {
+    float: right;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 5px;
+    display: none;
+}
+
 .top-bar {
-    color: white;
+    color: #fff;
     height: 40px;
     background-color: #d8d8d8;
 }
@@ -32,7 +45,7 @@ body {
     width: 100%;
     padding-top: 0;
     background-image: url("top.jpg");
-    background-size: 1170px 550px;
+    background-size: cover;
 }
 
 .menu {
@@ -97,6 +110,10 @@ ul {
     line-height: 50px;
 }
 
+.text {
+    display: inline-block;
+}
+
 .About {
     position: relative;
 }
@@ -108,6 +125,7 @@ ul {
     position: absolute;
     top: 50px;
     right: 20px;
+    margin: 20px;
 }
 
 .Skills p {
@@ -125,8 +143,8 @@ ul {
     text-align: center;
     overflow: hidden;
     z-index: 1;
-    float: left;
     margin: 40px;
+    display: inline-block;
 }
 
 .circle::before {
@@ -363,19 +381,95 @@ ul {
     text-align: center;
 }
 
+.Contact .span {
+    color: black;
+}
+
+.menu-container {
+    margin: 0;
+}
+
+.menu-container .menu {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container .menu .menu-item {
+    flex: 1;
+}
+
+.menu-container .menu .menu-item a {
+    background: #fff;
+    border-right: 1px solid #ccc;
+    color: #333;
+    display: block;
+    padding: 0.6em 0.4em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-container .menu .menu-item a:hover {
+    background: #ccc;
+    color: #ffffff;
+}
+
+.menu-container .menu .menu-item:last-child a {
+    border-right: none;
+}
+
 
 /*レスポンシブ*/
 
 @media (max-width:1000px) {
-    .myname {
-        left: 260px;
-    }
     .myname h1 {
-        font-size: 35px;
+        font-size: 40px;
     }
     .myname h2 {
-        font-size: 20px;
+        font-size: 25px;
+    }
+    .About dl,
+    .Skills p {
+        font-size: 18px;
     }
 }
 
-@media (max-width:670px) {}
+.face-img {
+    width: 120px;
+    height: 120px;
+    top: 45px
+}
+
+@media (max-width:680px) {
+    .main {
+        background-size: initial;
+    }
+    .About br {
+        display: none;
+    }
+    .About dl,
+    .Skills p {
+        font-size: 15px;
+    }
+    .Skillcircle {
+        text-align: center;
+    }
+    .face-img {
+        position: initial;
+        text-align: center;
+    }
+    .menu-container .menu {
+        display: none;
+        width: 100%;
+    }
+    .menu-container .menu .menu-item a {
+        border-bottom: 1px solid #ccc;
+        border-right: none;
+    }
+    .menu-container .menu .menu-item:last-child a {
+        border-bottom: none;
+    }
+}
