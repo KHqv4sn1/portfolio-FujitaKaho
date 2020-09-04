@@ -16,18 +16,6 @@ body {
 
 /*ページトップ*/
 
-.top-wrapper {
-    background-size: cover;
-}
-
-.menu-icon {
-    float: right;
-    font-size: 30px;
-    margin: 0 auto;
-    padding: 5px;
-    display: none;
-}
-
 .top-bar {
     color: #fff;
     height: 40px;
@@ -46,12 +34,17 @@ body {
     padding-top: 0;
     position: relative;
     background-image: url("top.jpg");
+    background-size: cover;
     background-position: center;
 }
 
 .menu {
     line-height: 40px;
     padding-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
 }
 
 .menu a {
@@ -64,10 +57,6 @@ body {
 .menu a:hover {
     color: #fff;
     text-shadow: 3px 3px 10px #fff;
-}
-
-ul {
-    list-style: none;
 }
 
 .myname {
@@ -126,6 +115,9 @@ ul {
     font-size: 20px;
     line-height: 50px;
 }
+
+
+/*改行を防ぐ*/
 
 .text {
     display: inline-block;
