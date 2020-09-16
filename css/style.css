@@ -1,450 +1,461 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-}
-
-.container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/*ページトップ*/
-
-.top-bar {
-    color: #fff;
-    height: 40px;
-    background-color: #d8d8d8;
-}
-
-.top-bar-moji {
-    font-size: 25px;
-    font-family: 'Kaushan Script', cursive;
-    margin-left: 5px;
-}
-
-.main {
-    height: 550px;
-    width: 100%;
-    padding-top: 0;
-    position: relative;
-    background-image: url("top.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.menu {
-    line-height: 40px;
-    padding-top: 20px;
-}
-
-.menu ul {
-    list-style: none;
-}
-
-.menu a {
-    color: #fff;
-    font-family: 'Kaushan Script', cursive;
-    text-align: right;
-    font-size: 23px;
-}
-
-.menu a:hover {
-    color: #fff;
-    text-shadow: 3px 3px 10px #fff;
-}
-
-.myname {
-    color: #fff;
-    font-family: 'Roboto Slab', serif;
-    line-height: 20px;
-    text-shadow: 3px 3px 10px #fff;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.myname h1 {
-    font-size: 50px;
-}
-
-.myname h2 {
-    font-size: 30px;
-}
-
-
-/*内容*/
-
-.About,
-.Skills,
-.Contact {
-    width: 85%;
-    margin: 70px auto;
-}
-
-.About h3,
-.Skills h3,
-.Contact h3 {
-    position: relative;
-    font-size: 35px;
-}
-
-.About h3:after,
-.Skills h3:after,
-.Contact h3:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 7px;
-    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
-    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
-}
-
-.About dl {
-    font-size: 20px;
-    line-height: 50px;
-}
-
-
-/*改行を防ぐ*/
-
-.text {
-    display: inline-block;
-}
-
-.About {
-    position: relative;
-}
-
-.face-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    margin: 20px;
-}
-
-.Skills p {
-    font-size: 20px;
-}
-
-
-/*スキル円グラフ*/
-
-.circle {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    text-align: center;
-    overflow: hidden;
-    z-index: 1;
-    margin: 40px;
-    display: inline-block;
-}
-
-.circle::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -60px;
-    width: 120px;
-    height: 120px;
-    transform-origin: right 60px;
-    z-index: 2;
-}
-
-.circle::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 60px;
-    width: 120px;
-    height: 120px;
-    transform-origin: left 60px;
-    z-index: 3;
-}
-
-.circle-inner {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 100px;
-    padding-top: 38px;
-    background: white;
-    border-radius: 50%;
-    z-index: 4;
-}
-
-.HTMLcircle {
-    background-color: #e44b23;
-}
-
-.HTMLcircle::after {
-    animation: rotateHTMLcircleright 2s linear forwards;
-}
-
-.HTMLcircle::before {
-    background-color: rgb(238, 178, 178);
-}
-
-@keyframes rotateHTMLcircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: rgb(238, 178, 178);
+    * {
+        box-sizing: border-box;
     }
-    100% {
-        transform: rotate(180deg);
-        background-color: rgb(238, 178, 178);
+    
+    body {
+        padding: 0;
+        margin: 0;
     }
-}
-
-.CSScircle {
-    background-color: #563d7c;
-}
-
-.CSScircle::after {
-    animation: rotateCSScircleright 2s linear forwards;
-}
-
-.CSScircle::before {
-    background-color: #e1d1fa;
-}
-
-@keyframes rotateCSScircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: #e1d1fa;
+    
+    .container {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fffbfb;
+        padding: 0;
     }
-    100% {
-        transform: rotate(180deg);
-        background-color: #e1d1fa;
+    /*ページトップ*/
+    
+    .top-bar {
+        color: #fff;
+        height: 40px;
+        background-color: #d8d8d8;
     }
-}
-
-.JavaScriptcircle {
-    background-color: #f1e05a;
-}
-
-.JavaScriptcircle::after {
-    animation: rotateJavaScriptcircleright 2s linear forwards;
-}
-
-.JavaScriptcircle::before {
-    background-color: #faf3bc;
-}
-
-@keyframes rotateJavaScriptcircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: #faf3bc;
-    }
-    100% {
-        transform: rotate(80deg);
-        background-color: #faf3bc;
-    }
-}
-
-.PHPcircle {
-    background-color: #4F5D95;
-}
-
-.PHPcircle::after {
-    animation: rotatePHPcircleright 2s linear forwards;
-}
-
-.PHPcircle::before {
-    background-color: #ccd6ff;
-}
-
-@keyframes rotatePHPcircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: #ccd6ff;
-    }
-    100% {
-        transform: rotate(40deg);
-        background-color: #ccd6ff;
-    }
-}
-
-.Wordpresscircle {
-    background-color: #13a0ff;
-}
-
-.Wordpresscircle::after {
-    animation: rotateWordpresscircleright 2s linear forwards;
-}
-
-.Wordpresscircle::before {
-    background-color: #b4defa;
-}
-
-@keyframes rotateWordpresscircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: #b4defa;
-    }
-    100% {
-        transform: rotate(30deg);
-        background-color: #b4defa;
-    }
-}
-
-.Responsivecircle {
-    background-color: #FF6347;
-}
-
-.Responsivecircle::after {
-    animation: rotateResponsivecircleright 2s linear forwards;
-}
-
-.Responsivecircle::before {
-    background-color: #ffcdc4;
-}
-
-@keyframes rotateResponsivecircleright {
-    0% {
-        transform: rotate(0deg);
-        background-color: #ffcdc4;
-    }
-    100% {
-        transform: rotate(120deg);
-        background-color: #ffcdc4;
-    }
-}
-
-
-/*連絡先*/
-
-.information {
-    margin: 50px;
-    text-align: center;
-}
-
-.Contact {
-    height: 300px;
-}
-
-.Contact i {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.Contact p {
-    padding-top: 5px;
-    font-size: 17px;
-}
-
-
-/*ページトップへ移動*/
-
-#page_top {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    right: 50px;
-    bottom: 20px;
-    background: #acacac;
-    opacity: 0.6;
-}
-
-#page_top a {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-decoration: none;
-}
-
-#page_top a::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f062';
-    font-size: 25px;
-    color: #fff;
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-}
-
-
-/*レスポンシブ*/
-
-@media (max-width:1000px) {
-    .myname h1 {
-        font-size: 40px;
-    }
-    .myname h2 {
+    
+    .top-bar-moji {
         font-size: 25px;
+        font-family: 'Kaushan Script', cursive;
+        margin-left: 5px;
     }
-    .About br {
-        display: none;
-    }
-    .About dl,
-    .Skills p {
-        font-size: 18px;
-    }
-    .About .span {
-        text-align: justify;
-    }
-    .face-img {
-        width: 110px;
-        height: 110px;
-        top: 28px
-    }
-}
-
-@media (max-width:680px) {
+    
     .main {
-        background-size: initial;
+        height: 550px;
+        width: 100%;
+        padding-top: 0;
+        position: relative;
+        background-image: url("top01.jpg");
+        background-size: cover;
+        background-position: center;
     }
-    .About dl,
-    .Skills p {
-        font-size: 15px;
+    
+    .menu {
+        line-height: 40px;
+        padding-top: 20px;
     }
+    
+    .menu ul {
+        list-style: none;
+    }
+    
+    .menu a {
+        color: #fff;
+        font-family: 'Kaushan Script', cursive;
+        text-align: right;
+        font-size: 23px;
+    }
+    
+    .menu a:hover {
+        color: #fff;
+        text-shadow: 3px 3px 10px #fff;
+    }
+    
+    .myname {
+        color: #fff;
+        font-family: 'Roboto Slab', serif;
+        line-height: 20px;
+        text-shadow: 3px 3px 10px #d8d8d8;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .myname h1 {
+        font-size: 50px;
+    }
+    
+    .myname h2 {
+        font-size: 30px;
+    }
+    /*内容*/
+    
+    .About,
+    .Skills,
+    .Contact {
+        width: 85%;
+        margin: 70px auto;
+    }
+    
     .About h3,
     .Skills h3,
     .Contact h3 {
-        font-size: 31px;
+        position: relative;
+        font-size: 35px;
     }
-    .Skillcircle {
+    
+    .About h3:after,
+    .Skills h3:after,
+    .Contact h3:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7px;
+        background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+        background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    }
+    
+    .About dl {
+        font-size: 20px;
+        line-height: 50px;
+    }
+    /*改行を防ぐ*/
+    
+    .text {
+        display: inline-block;
+    }
+    
+    .About {
+        position: relative;
+    }
+    
+    .face-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        margin: 20px;
+    }
+    
+    .Skills p {
+        font-size: 20px;
+    }
+    /*スキル円グラフ*/
+    
+    .circle {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+        margin: 40px;
+        display: inline-block;
+    }
+    
+    .circle::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -60px;
+        width: 120px;
+        height: 120px;
+        transform-origin: right 60px;
+        z-index: 2;
+    }
+    
+    .circle::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 60px;
+        width: 120px;
+        height: 120px;
+        transform-origin: left 60px;
+        z-index: 3;
+    }
+    
+    .circle-inner {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        padding-top: 38px;
+        background: white;
+        border-radius: 50%;
+        z-index: 4;
+    }
+    
+    .HTMLcircle {
+        background-color: #e44b23;
+    }
+    
+    .HTMLcircle::after {
+        animation: rotateHTMLcircleright 2s linear forwards;
+    }
+    
+    .HTMLcircle::before {
+        background-color: rgb(238, 178, 178);
+    }
+    
+    @keyframes rotateHTMLcircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: rgb(238, 178, 178);
+        }
+        100% {
+            transform: rotate(180deg);
+            background-color: rgb(238, 178, 178);
+        }
+    }
+    
+    .CSScircle {
+        background-color: #563d7c;
+    }
+    
+    .CSScircle::after {
+        animation: rotateCSScircleright 2s linear forwards;
+    }
+    
+    .CSScircle::before {
+        background-color: #e1d1fa;
+    }
+    
+    @keyframes rotateCSScircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #e1d1fa;
+        }
+        100% {
+            transform: rotate(180deg);
+            background-color: #e1d1fa;
+        }
+    }
+    
+    .JavaScriptcircle {
+        background-color: #f1e05a;
+    }
+    
+    .JavaScriptcircle::after {
+        animation: rotateJavaScriptcircleright 2s linear forwards;
+    }
+    
+    .JavaScriptcircle::before {
+        background-color: #faf3bc;
+    }
+    
+    @keyframes rotateJavaScriptcircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #faf3bc;
+        }
+        100% {
+            transform: rotate(80deg);
+            background-color: #faf3bc;
+        }
+    }
+    
+    .PHPcircle {
+        background-color: #4F5D95;
+    }
+    
+    .PHPcircle::after {
+        animation: rotatePHPcircleright 2s linear forwards;
+    }
+    
+    .PHPcircle::before {
+        background-color: #ccd6ff;
+    }
+    
+    @keyframes rotatePHPcircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #ccd6ff;
+        }
+        100% {
+            transform: rotate(40deg);
+            background-color: #ccd6ff;
+        }
+    }
+    
+    .Wordpresscircle {
+        background-color: #13a0ff;
+    }
+    
+    .Wordpresscircle::after {
+        animation: rotateWordpresscircleright 2s linear forwards;
+    }
+    
+    .Wordpresscircle::before {
+        background-color: #b4defa;
+    }
+    
+    @keyframes rotateWordpresscircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #b4defa;
+        }
+        100% {
+            transform: rotate(30deg);
+            background-color: #b4defa;
+        }
+    }
+    
+    .Responsivecircle {
+        background-color: #FF6347;
+    }
+    
+    .Responsivecircle::after {
+        animation: rotateResponsivecircleright 2s linear forwards;
+    }
+    
+    .Responsivecircle::before {
+        background-color: #ffcdc4;
+    }
+    
+    @keyframes rotateResponsivecircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #ffcdc4;
+        }
+        100% {
+            transform: rotate(120deg);
+            background-color: #ffcdc4;
+        }
+    }
+    
+    .Photoshopcircle {
+        background-color: #36f8d8;
+    }
+    
+    .Photoshopcircle::after {
+        animation: rotatePhotoshopcircleright 2s linear forwards;
+    }
+    
+    .Photoshopcircle::before {
+        background-color: #d0fff7;
+    }
+    
+    @keyframes rotatePhotoshopcircleright {
+        0% {
+            transform: rotate(0deg);
+            background-color: #d0fff7;
+        }
+        100% {
+            transform: rotate(80deg);
+            background-color: #d0fff7;
+        }
+    }
+    /*連絡先*/
+    
+    .information {
+        margin: 50px;
         text-align: center;
     }
-    .face-img {
-        position: initial;
-        display: table;
-        margin: 0 auto;
+    
+    .Contact {
+        height: 300px;
     }
-    .menu ul {
-        display: flex;
-    }
-    .menu li {
-        flex: auto;
-    }
-    .menu a {
+    
+    .Contact i {
         font-size: 18px;
+        font-weight: bold;
     }
-}
+    
+    .Contact p {
+        padding-top: 5px;
+        font-size: 17px;
+    }
+    /*ページトップへ移動*/
+    
+    #page_top {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 50px;
+        bottom: 20px;
+        background: #acacac;
+        opacity: 0.6;
+    }
+    
+    #page_top a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    
+    #page_top a::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f062';
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+    }
+    /*レスポンシブ*/
+    
+    @media (max-width:1000px) {
+        .myname h1 {
+            font-size: 40px;
+        }
+        .myname h2 {
+            font-size: 25px;
+        }
+        .About br {
+            display: none;
+        }
+        .About dl,
+        .Skills p {
+            font-size: 18px;
+        }
+        .About .span {
+            text-align: justify;
+        }
+        .face-img {
+            width: 110px;
+            height: 110px;
+            top: 28px
+        }
+    }
+    
+    @media (max-width:680px) {
+        .main {
+            background-size: initial;
+        }
+        .About dl,
+        .Skills p {
+            font-size: 15px;
+        }
+        .About h3,
+        .Skills h3,
+        .Contact h3 {
+            font-size: 31px;
+        }
+        .Skillcircle {
+            text-align: center;
+        }
+        .face-img {
+            position: initial;
+            display: table;
+            margin: 0 auto;
+        }
+        .menu ul {
+            display: flex;
+        }
+        .menu li {
+            flex: auto;
+        }
+        .menu a {
+            font-size: 18px;
+        }
+    }
